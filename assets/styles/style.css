@@ -1,0 +1,212 @@
+.root {
+  background-color: #004e35;
+}
+img {
+  max-width: 100%;
+  min-height: 100%;
+}
+.header,
+.title {
+  max-width: 97%;
+  margin: 0 auto;
+}
+
+/* header start */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__nav {
+  display: grid;
+  grid-template-columns: repeat(5, 10vw);
+  justify-items: center;
+  margin-top: 2%;
+}
+.header__menu {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  color: #88e53e;
+  text-decoration: none;
+}
+/* .header__menu:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #88e53e;
+  position: absolute;
+  top: 100%;
+}
+.header__menu:hover {
+  color: #88e53e;
+}
+.header__menu:hover:after {
+  display: block;
+} */
+
+/* header end */
+/* title start */
+.title {
+  display: grid;
+  align-items: center;
+  grid-template-areas:
+    "h2 h1"
+    "title__text title__text";
+}
+h1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(24px + 155 * (100vw / 1280));
+  color: #88e53e;
+  grid-area: h1;
+  padding: 5% 0 0 25%;
+}
+h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(20px + 4 * (100vw / 1280));
+  line-height: 29px;
+  color: #88e53e;
+  grid-area: h2;
+}
+.title__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #88e53e;
+  grid-area: title__text;
+}
+/* title end */
+
+/* section1 start */
+.section1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #c0e8c0;
+}
+.section1__img {
+}
+.section1__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.section1__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(20px + 43 * ((100vw - 320px) / 1280));
+  line-height: 58px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #004e35;
+}
+/* section1 end */
+
+/* section2 start */
+.section2 {
+  background-color: white;
+
+  display: grid;
+  justify-items: center;
+}
+.section2__heading {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(24px + 84 * ((100vw - 320px) / 1280));
+  line-height: 101px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #004e35;
+  margin-top: 5%;
+}
+.section2__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 60%;
+  margin-top: 8%;
+}
+.section2__item {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  color: #004e35;
+}
+.section2__line {
+  height: 1px;
+  background: #004e35;
+  margin-top: 1%;
+}
+.section2__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #004e35;
+  margin-top: 2%;
+  max-width: 46%;
+  margin: 0 auto;
+}
+/* section2 end */
+
+@media (min-width: 768px) {
+  .title {
+    display: grid;
+    align-items: center;
+    grid-template-areas:
+      "h2 h1"
+      "title__text title__text";
+  }
+  h1 {
+    font-size: calc(24px + (155 + 155 * 0.7) * ((100vw - 320px) / 1280));
+  }
+  h2 {
+    font-size: calc(20px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280));
+  }
+  .section1__text {
+    font-size: calc(20px + (43 + 43 * 0.7) * ((100vw - 320px) / 1280));
+  }
+  .section2__heading {
+    font-weight: 200;
+    font-size: calc(24px + (84 + 84 * 0.7) * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (max-width: 767px) {
+  .title {
+    display: grid;
+    align-items: center;
+    grid-template-areas:
+      "h1"
+      "h2"
+      "title__text";
+  }
+  h1 {
+    font-size: calc(24px + (155 + 155 * 0.7) * ((100vw - 320px) / 1280));
+  }
+  h2 {
+    font-size: calc(20px + (4 + 4 * 0.7) * ((100vw - 320px) / 1280));
+  }
+  .section1__text {
+    font-size: calc(20px + (43 + 43 * 0.7) * ((100vw - 320px) / 1280));
+  }
+  .section2__heading {
+    font-weight: 200;
+    font-size: calc(24px + (84 + 84 * 0.7) * ((100vw - 320px) / 1280));
+  }
+}
